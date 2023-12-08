@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+@media screen and (max-width: 768px) {
+}
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +43,7 @@ body::before {
 }
 
 .navbar-nav .nav-link {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: black;
   text-decoration: none;
@@ -103,7 +105,6 @@ body::before {
   transform: scale(1.05);
   transition: transform 0.3s ease;
 }
-
 .card-title {
   text-transform: capitalize;
   font-size: 14px;
@@ -126,4 +127,140 @@ body::before {
   align-items: center;
   background-color: #f3722c;
   overflow: hidden;
+}
+
+.section-boxes {
+  background-color: #fff;
+  padding: 60px 0;
+}
+
+.section-boxes .card {
+  background-color: #343a40;
+  border: none;
+}
+
+.section-boxes .card:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+.section-boxes .card-body {
+  padding: 20px;
+}
+
+.section-boxes .card-title,
+.section-boxes .card-text {
+  color: #fff;
+}
+
+.section-boxes .btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.section-boxes .btn:hover {
+  background-color: #218838;
+}
+
+/* Adjust the icon color */
+.section-boxes .bi {
+  color: #ffac07;
+}
+
+#studio {
+  padding: 30px 0;
+}
+
+.sec-heading {
+  margin-bottom: 20px;
+}
+
+.sec-heading h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 65px;
+}
+
+.single-box {
+  border: 1px solid #ddd;
+  border-radius: 20px; /* Add the colon here */
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+
+.info-area {
+  padding: 0 20px 45px;
+}
+
+.img-area {
+  overflow: hidden;
+  padding: 15px 0 15px;
+}
+
+.img-area img {
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  max-width: 230px;
+}
+
+.single-box:hover img {
+  transform: scale(1.1);
+}
+
+.info-area a {
+  display: inline-block;
+  margin: 25px 0 0;
+  background-color: darkorange;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 4px;
+}
+
+.studio-slider .owl-carousel {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -60px;
+  text-align: center;
+  width: 100%;
+}
+
+.studio-slider button.owl-carousel {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin: 0 6px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #262626;
+}
+
+.studio-slider button.owl-carousel.active {
+  background-color: coral;
+}
+
+.move-animation {
+  position: relative;
+  animation: move-animation 2s ease-in-out infinite;
+}
+
+@keyframes move-animation {
+  0% {
+    top: 3px;
+  }
+
+  50% {
+    top: -3px;
+  }
+
+  100% {
+    top: 3px;
+  }
 }
