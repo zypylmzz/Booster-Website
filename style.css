@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@media screen and (max-width: 768px) {
-}
 * {
   margin: 0;
   padding: 0;
@@ -16,6 +14,7 @@ body::before {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+/* Navbar Stili */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -71,156 +70,198 @@ body::before {
   width: 100%;
 }
 
-.section-boxes {
-  background-color: #fff;
-  padding: 60px 0;
+/* Carousel ve Görsel Stili */
+#carouselExampleIndicators img {
+  max-height: 100%;
+  width: auto;
+  margin: 41px 0 0 0;
 }
 
-.section-boxes .card {
-  background-color: #f8f9fa;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.section-boxes .card-title,
-.section-boxes .card-text {
-  color: #000;
-}
-
-.section-boxes .btn {
-  background-color: #f3722c;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none !important;
-  display: inline-block;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.section-boxes .btn:hover {
-  background-color: #f3722c;
-}
-
-.section-boxes .card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-.card-title {
-  text-transform: capitalize;
-  font-size: 14px;
-  font-weight: 300;
-}
-
-.card-text {
-  font-size: 16px;
-  line-height: 25px;
-  margin: 40px 0;
-  font-weight: 400;
-}
-
-.section {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
+/* Custom Kart Stilleri */
+.custom-cards-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f3722c;
-  overflow: hidden;
+  height: 50vh;
+  background-size: cover;
 }
 
-.section-boxes {
-  background-color: #fff;
-  padding: 60px 0;
+.custom-cards {
+  display: flex;
+  gap: 15px;
 }
 
-.section-boxes .card {
-  background-color: #343a40;
-  border: none;
-}
-
-.section-boxes .card:hover {
-  transform: scale(1.05);
-  transition: transform 0.3s ease;
-}
-
-.section-boxes .card-body {
+.custom-card {
+  animation: fadeIn 0.5s ease-in-out;
+  flex: 0 0 auto;
   padding: 20px;
-}
-
-.section-boxes .card-title,
-.section-boxes .card-text {
-  color: #fff;
-}
-
-.section-boxes .btn {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none !important;
-  display: inline-block;
-  transition: background-color 0.3s ease-in-out;
-}
-
-.section-boxes .btn:hover {
-  background-color: #218838;
-}
-
-/* Adjust the icon color */
-.section-boxes .bi {
-  color: #ffac07;
-}
-
-#studio {
-  padding: 30px 0;
-}
-
-.sec-heading {
-  margin-bottom: 20px;
-}
-
-.sec-heading h6 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 65px;
-}
-
-.single-box {
-  border: 1px solid #ddd;
-  border-radius: 20px; /* Add the colon here */
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  text-align: center;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
   overflow: hidden;
-  background-color: #fff;
-  margin-bottom: 40px;
 }
 
-.info-area {
-  padding: 0 20px 45px;
+.custom-card p,
+.custom-card h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-.img-area {
-  overflow: hidden;
-  padding: 15px 0 15px;
+.custom-card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ff8c00;
+  border: 2px solid #ff8c00;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
-.img-area img {
+.custom-card:hover:before {
+  opacity: 1;
+}
+
+.custom-card:nth-child(1) {
+  background-color: #3498db;
+}
+
+.custom-card:nth-child(2) {
+  background-color: #2ecc71;
+}
+
+.custom-card:nth-child(3) {
+  background-color: #e74c3c;
+}
+
+.counter {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation: countUp 2s ease;
+}
+
+.box-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.custom-card:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Counter animasyonu */
+@keyframes countUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
+/* Learn Section */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  transition: all 0.5s ease;
-  max-width: 230px;
 }
 
-.single-box:hover img {
-  transform: scale(1.1);
+/* Program Süreci Stilleri */
+#Programsüreci {
+  padding: 50px 0;
+  display: flex;
+  align-items: center;
+  text-align: center; /* Başlığı ortala */
 }
 
-.info-area a {
-  display: inline-block;
-  margin: 25px 0 0;
-  background-color: darkorange;
+#Programsüreci img {
+  max-width: 100%;
+  height: auto;
+  margin-right: 20px;
+}
+
+#Programsüreci h2 {
+  font-size: 2em; /* Başlık boyutunu küçült */
+  font-weight: bold; /* Başlığı kalın yap */
+  color: #dc3545;
+  margin-bottom: 10px; /* Başlık ile yazı arasındaki boşluğu azalt */
+}
+
+#Programsüreci p {
+  font-size: 1em; /* Yazı boyutunu küçült */
+  line-height: 1.6;
+  color: #555;
+  max-width: 600px; /* Yazı genişliği sınırlaması */
+  margin: 0 auto 20px; /* Yazıyı ortala ve altına boşluk bırak */
+}
+
+#Programsüreci .btn {
+  background-color: transparent;
+  color: #dc3545;
+  border-color: #dc3545;
+  font-size: 0.8em; 
+  display: inline-block; 
+  margin-top: 10px; 
+}
+
+#Programsüreci .btn:hover {
+  background-color: #dc3545;
   color: #fff;
-  padding: 10px 35px;
-  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  #Programsüreci {
+    flex-direction: column;
+  }
+
+  #Programsüreci img {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  #Programsüreci h2 {
+    font-size: 1.5em; 
+  }
+}
+
+/* Studio Slider Stilleri */
+.studio-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+}
+
+.studio-slider .owl-carousel {
+  width: 100%;
 }
 
 .studio-slider .owl-carousel {
@@ -243,7 +284,7 @@ body::before {
 }
 
 .studio-slider button.owl-carousel.active {
-  background-color: coral;
+  background-color: #f3722c;
 }
 
 .move-animation {
@@ -263,4 +304,234 @@ body::before {
   100% {
     top: 3px;
   }
+}
+
+/* Hizmet Kartları */
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 80px;
+}
+
+.card {
+  width: 400px; /* Kart genişliği artırıldı */
+  height: 100vh; /* Kart yüksekliği artırıldı */
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: white;
+  border: 3px solid rosybrown;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  background-color: transparent;
+  transform: translateY(-8px);
+  border-color: #f3722c;
+}
+
+.card i {
+  color: #262626;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background-color: #f3722c; /* Kart rengi turuncu yapıldı */
+  padding: 10px;
+}
+
+.card h2 {
+  color: brown;
+  font-size: 20px; /* Başlık boyutu artırıldı */
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  text-align: center;
+  width: 100%;
+  color: burlywood;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3;
+}
+
+/* Studio Slider İkon Rengini Ayarla */
+.studio-slider .bi {
+  color: #ffac07;
+}
+
+#portfolyo {
+  padding: 150px 0; /* Üst ve alt boşluk ekleniyor */
+  margin-bottom: 50px;
+}
+
+.sec-heading {
+  margin-bottom: 70px;
+}
+
+.sec-heading h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 65px;
+}
+
+.single-box {
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #fff;
+  margin-bottom: 40px;
+  display: flex; /* Kartları yatay hizala */
+  flex-direction: column; /* İçerikleri dikey hizala */
+  align-items: center; /* İçerikleri ortala */
+  margin-right: 20px; /* Kartlar arasındaki boşluk (gap) */
+}
+
+.single-box:last-child {
+  margin-right: 0; /* Son kartın sağ boşluğunu sıfırla */
+}
+
+.info-area {
+  padding: 0 20px 45px;
+  flex-grow: 1; /* İçeriği genişletmek için */
+}
+
+.img-area {
+  overflow: hidden;
+  padding: 15px 0 15px;
+}
+
+.img-area img {
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  max-width: 230px;
+  display: block; /* Logoları ortalamak için eklendi */
+}
+
+.single-box:hover img {
+  transform: scale(1.1);
+}
+
+.info-area a {
+  display: inline-block;
+  margin: 25px 0 0;
+  background-color: darkorange;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 4px;
+}
+
+/* Logoları ortala ve başlık ile kartlar arasına padding ver */
+.studio-slider .img-area,
+.studio-slider .info-area {
+  text-align: center;
+}
+
+.studio-slider .info-area {
+  padding: 20px;
+}
+
+.studio-slider .single-box {
+  margin-bottom: 20px;
+}
+
+.studio-slider .sec-heading {
+  margin-bottom: 50px;
+  text-align: center; /* Başlığı ortala */
+}
+
+.studio-slider .sec-heading h6 {
+  font-size: 36px;
+}
+
+/* Destek Kartları */
+.server-wrapper {
+  padding: 50px 0;
+  background-color: #f8f9fa; /* Arkaplan rengi */
+}
+
+.services {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services h3 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #343a40;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  width: 300px;
+  height: 200px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: white;
+  border: 1px solid rosybrown;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  background-color: transparent;
+  transform: translateY(-8px);
+  border-color: #f3722c;
+}
+
+.card i {
+  color: #262626;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background-color: white;
+  padding: 5px;
+}
+
+.card h2 {
+  color: brown;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px; 
+}
+
+.card p {
+  text-align: center;
+  width: 100%;
+  color: burlywood;
+  flex-grow: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card:hover {
+  background-color: white;
+  border-color: #ff8c00;
+}
+
+.card:hover h2,
+.card:hover p {
+  color: #ff8c00;
 }
