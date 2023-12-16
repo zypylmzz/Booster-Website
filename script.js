@@ -80,7 +80,7 @@ $(document).ready(function () {
 //Counter
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
-  const speed = 100; // Decreased speed for slower counting
+  const speed = 5000;
 
   counters.forEach((counter) => {
     const updateCount = () => {
@@ -107,8 +107,8 @@ $(document).ready(function () {
     loop: true,
     margin: 20,
     nav: true,
-    autoplay: true, // Enable autoplay
-    autoplayTimeout: 5000, // Set autoplay interval in milliseconds (e.g., 5000 for 5 seconds)
+    autoplay: true,
+    autoplayTimeout: 5000,
     navText: [
       "<i class='bi bi-chevron-left'></i>",
       "<i class='bi bi-chevron-right'></i>",
@@ -126,3 +126,13 @@ $(document).ready(function () {
     },
   });
 });
+
+function showText(card) {
+  var hiddenText = card.querySelector(".hidden-text");
+  hiddenText.style.display = "block";
+}
+
+function hideText(card) {
+  var hiddenText = card.querySelector(".hidden-text");
+  hiddenText.style.display = "none";
+}
