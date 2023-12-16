@@ -106,7 +106,7 @@ body::before {
   animation: fadeIn 0.5s ease-in-out;
   flex: 0 0 auto;
   padding: 20px;
-  border-radius: 20px;
+  border-radius: 80px 20px 20px 80px; /* Enine oval yapmak için border-radius değerleri */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
   text-align: center;
@@ -120,45 +120,27 @@ body::before {
 
 .custom-card p,
 .custom-card h1 {
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   color: #ffffff;
 }
 
-.custom-card:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ff8c00;
-  border: 2px solid #ff8c00;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.custom-card:hover:before {
-  opacity: 1;
-}
-
 .custom-card:nth-child(1) {
-  background-color: #3498db;
+  background-color: #4285f4;
 }
 
 .custom-card:nth-child(2) {
-  background-color: #2ecc71;
+  background-color: #0f9d58;
 }
 
 .custom-card:nth-child(3) {
-  background-color: #e74c3c;
+  background-color: #db4437;
 }
 
 .counter {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 15px;
-  animation: countUp 2s ease;
 }
 
 .box-title {
@@ -167,7 +149,11 @@ body::before {
 }
 
 .custom-card:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 30px;
+}
+
+.custom-card {
+  border-radius: 45px;
 }
 
 /* Counter animasyonu */
@@ -176,18 +162,15 @@ body::before {
     transform: scale(1);
   }
   to {
-    transform: scale(1.1);
+    transform: scale(1.3);
   }
 }
 
-/* Learn Section */
-body {
-  font-family: "Arial", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.custom-card:hover .counter {
+  animation: countUp 2s ease;
 }
 
+/* Learn Section */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -198,7 +181,7 @@ body {
   padding: 50px 0;
   display: flex;
   align-items: center;
-  text-align: center; /* Başlığı ortala */
+  text-align: center;
 }
 
 #Programsüreci img {
@@ -208,27 +191,27 @@ body {
 }
 
 #Programsüreci h2 {
-  font-size: 2em; /* Başlık boyutunu küçült */
-  font-weight: bold; /* Başlığı kalın yap */
-  color: #dc3545;
-  margin-bottom: 10px; /* Başlık ile yazı arasındaki boşluğu azalt */
+  font-size: 2em;
+  font-weight: bold;
+  color: #db4437;
+  margin-bottom: 10px;
 }
 
 #Programsüreci p {
-  font-size: 1em; /* Yazı boyutunu küçült */
+  font-size: 1em;
   line-height: 1.6;
   color: #555;
-  max-width: 600px; /* Yazı genişliği sınırlaması */
-  margin: 0 auto 20px; /* Yazıyı ortala ve altına boşluk bırak */
+  max-width: 600px;
+  margin: 0 auto 20px;
 }
 
 #Programsüreci .btn {
   background-color: transparent;
   color: #dc3545;
   border-color: #dc3545;
-  font-size: 0.8em; 
-  display: inline-block; 
-  margin-top: 10px; 
+  font-size: 0.8em;
+  display: inline-block;
+  margin-top: 10px;
 }
 
 #Programsüreci .btn:hover {
@@ -236,6 +219,7 @@ body {
   color: #fff;
 }
 
+/* Responsive Yazılar */
 @media (max-width: 768px) {
   #Programsüreci {
     flex-direction: column;
@@ -247,7 +231,7 @@ body {
   }
 
   #Programsüreci h2 {
-    font-size: 1.5em; 
+    font-size: 1.5em; /* Başlık boyutunu küçült */
   }
 }
 
@@ -284,7 +268,7 @@ body {
 }
 
 .studio-slider button.owl-carousel.active {
-  background-color: #f3722c;
+  background-color: #f17300;
 }
 
 .move-animation {
@@ -306,23 +290,37 @@ body {
   }
 }
 
-/* Hizmet Kartları */
+/* Support Section */
+.server-wrapper {
+  padding: 30px;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h6 {
+  color: #f17300;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
 .services-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
-  margin-top: 80px;
+  gap: 30px;
 }
 
 .card {
-  width: 400px; /* Kart genişliği artırıldı */
-  height: 100vh; /* Kart yüksekliği artırıldı */
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: white;
-  border: 3px solid rosybrown;
-  border-radius: 20px;
+  width: 30px;
+  height: 350px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: #ffffff; /* Kart rengi beyaz yapıldı */
+  border: 4px solid #f17300; /* Bordır rengi turuncu yapıldı */
+  border-radius: 40px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -334,31 +332,31 @@ body {
 
 .card:hover {
   background-color: transparent;
-  transform: translateY(-8px);
-  border-color: #f3722c;
+  transform: translateY(-6px);
+  border-color: #262626;
 }
 
 .card i {
-  color: #262626;
+  color: #7a00df;
   margin-bottom: 15px;
   font-size: 2.5rem;
   border-radius: 50%;
-  background-color: #f3722c; /* Kart rengi turuncu yapıldı */
+  background-color: #f17300;
   padding: 10px;
 }
 
 .card h2 {
-  color: brown;
-  font-size: 20px; /* Başlık boyutu artırıldı */
+  color: #db4437;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .card p {
   text-align: center;
   width: 100%;
-  color: burlywood;
+  color: ff6d00;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -366,23 +364,25 @@ body {
   margin: 3;
 }
 
-/* Studio Slider İkon Rengini Ayarla */
+/*portfolyo*/
+
 .studio-slider .bi {
-  color: #ffac07;
+  color: #f17300;
 }
 
 #portfolyo {
-  padding: 150px 0; /* Üst ve alt boşluk ekleniyor */
+  padding: 58px 0;
   margin-bottom: 50px;
 }
 
 .sec-heading {
   margin-bottom: 70px;
+  color: #0f9d58;
 }
 
 .sec-heading h6 {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 65px;
+  font-size: 50px;
 }
 
 .single-box {
@@ -391,19 +391,19 @@ body {
   overflow: hidden;
   background-color: #fff;
   margin-bottom: 40px;
-  display: flex; /* Kartları yatay hizala */
-  flex-direction: column; /* İçerikleri dikey hizala */
-  align-items: center; /* İçerikleri ortala */
-  margin-right: 20px; /* Kartlar arasındaki boşluk (gap) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 20px;
 }
 
 .single-box:last-child {
-  margin-right: 0; /* Son kartın sağ boşluğunu sıfırla */
+  margin-right: 0;
 }
 
 .info-area {
   padding: 0 20px 45px;
-  flex-grow: 1; /* İçeriği genişletmek için */
+  flex-grow: 1;
 }
 
 .img-area {
@@ -415,7 +415,7 @@ body {
   margin: 0 auto;
   transition: all 0.5s ease;
   max-width: 230px;
-  display: block; /* Logoları ortalamak için eklendi */
+  display: block;
 }
 
 .single-box:hover img {
@@ -425,13 +425,12 @@ body {
 .info-area a {
   display: inline-block;
   margin: 25px 0 0;
-  background-color: darkorange;
+  background-color: #f17300;
   color: #fff;
   padding: 10px 35px;
   border-radius: 4px;
 }
 
-/* Logoları ortala ve başlık ile kartlar arasına padding ver */
 .studio-slider .img-area,
 .studio-slider .info-area {
   text-align: center;
@@ -447,17 +446,21 @@ body {
 
 .studio-slider .sec-heading {
   margin-bottom: 50px;
-  text-align: center; /* Başlığı ortala */
+  text-align: center;
 }
 
 .studio-slider .sec-heading h6 {
   font-size: 36px;
 }
 
-/* Destek Kartları */
+.hidden-text {
+  display: none;
+}
+
+/* Support Kartları */
 .server-wrapper {
   padding: 50px 0;
-  background-color: #f8f9fa; /* Arkaplan rengi */
+  background-color: #f8f9fa;
 }
 
 .services {
@@ -468,23 +471,23 @@ body {
 .services h3 {
   font-size: 32px;
   font-weight: bold;
-  color: #343a40;
+  color: #fe7f2d;
 }
 
 .services-cards {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
 .card {
-  width: 300px;
-  height: 200px;
+  flex: 0 0 calc(33.3333% - 20px);
+  max-width: 300px;
+  height: auto;
   margin-bottom: 20px;
-  padding: 10px;
+  padding: 15px;
   background-color: white;
-  border: 1px solid rosybrown;
+  border: 1px solid #4285f4;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -496,11 +499,11 @@ body {
 .card:hover {
   background-color: transparent;
   transform: translateY(-8px);
-  border-color: #f3722c;
+  border-color: #86bbd8;
 }
 
 .card i {
-  color: #262626;
+  color: #4285f4;
   margin-bottom: 10px;
   font-size: 2rem;
   border-radius: 50%;
@@ -509,29 +512,35 @@ body {
 }
 
 .card h2 {
-  color: brown;
-  font-size: 14px;
+  color: #4285f4;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .card p {
   text-align: center;
-  width: 100%;
-  color: burlywood;
-  flex-grow: 1; 
-  display: flex;
+  width: 108.5%;
+  color: #f26419;
+  flex-grow: 1.5;
   flex-direction: column;
   justify-content: center;
 }
-
 .card:hover {
   background-color: white;
-  border-color: #ff8c00;
+  border-color: #f17300;
 }
 
 .card:hover h2,
 .card:hover p {
-  color: #ff8c00;
+  color: #f17300;
 }
+.custom-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  background-color: transparent;
+  padding: 10px;
+  color: #fff;
+}
+
