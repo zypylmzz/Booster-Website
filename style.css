@@ -1,5 +1,7 @@
+/* Font İmport */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +16,7 @@ body::before {
     Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
-/* Navbar Stili */
+/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -70,7 +72,7 @@ body::before {
   width: 100%;
 }
 
-/* Carousel ve Görsel Stili */
+/* Carousel and Image Styles */
 #carouselExampleIndicators img {
   max-height: 100%;
   width: auto;
@@ -88,41 +90,51 @@ body::before {
   }
 }
 
-/* Custom Kart Stilleri */
+/* Custom Card Styles */
 .custom-cards-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
   background-size: cover;
+  background-color: #f8f9fa;
 }
 
 .custom-cards {
   display: flex;
-  gap: 15px;
+  gap: 10px;
 }
 
 .custom-card {
   animation: fadeIn 0.5s ease-in-out;
   flex: 0 0 auto;
-  padding: 20px;
-  border-radius: 80px 20px 20px 80px; /* Enine oval yapmak için border-radius değerleri */
+  padding: 10px;
+  border-radius: 80px 20px 20px 80px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out,
+    width 0.3s ease-in-out, height 0.3s ease-in-out; /* Added height transition */
   text-align: center;
-  width: 300px;
+  width: 300px; /* Adjust the initial width to your desired size */
+  height: 180px; /* Adjust the initial height to your desired size */
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
 }
 
+.custom-card .icon-container {
+  margin-bottom: 5px;
+  font-size: 9px;
+}
+
 .custom-card p,
 .custom-card h1 {
-  font-size: 30px;
+  font-size: 26px; 
   font-weight: bold;
   color: #ffffff;
+  align-items: center;
 }
 
 .custom-card:nth-child(1) {
@@ -140,11 +152,11 @@ body::before {
 .counter {
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 15px;
+  align-items: center;
 }
 
 .box-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 
@@ -156,7 +168,6 @@ body::before {
   border-radius: 45px;
 }
 
-/* Counter animasyonu */
 @keyframes countUp {
   from {
     transform: scale(1);
@@ -176,7 +187,6 @@ body::before {
   margin: 0 auto;
 }
 
-/* Program Süreci Stilleri */
 #Programsüreci {
   padding: 50px 0;
   display: flex;
@@ -219,7 +229,7 @@ body::before {
   color: #fff;
 }
 
-/* Responsive Yazılar */
+/* Responsive Text */
 @media (max-width: 768px) {
   #Programsüreci {
     flex-direction: column;
@@ -231,7 +241,7 @@ body::before {
   }
 
   #Programsüreci h2 {
-    font-size: 1.5em; /* Başlık boyutunu küçült */
+    font-size: 1.5em;
   }
 }
 
@@ -239,7 +249,6 @@ body::before {
 .studio-slider {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 100%;
   overflow: hidden;
 }
@@ -274,6 +283,113 @@ body::before {
 .move-animation {
   position: relative;
   animation: move-animation 2s ease-in-out infinite;
+}
+
+#portfolyo {
+  padding: 58px 0;
+  margin-bottom: 50px;
+}
+
+.sec-heading {
+  margin-bottom: 70px;
+  color: #dc3545;
+  text-align: center;
+}
+
+.sec-heading h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 50px;
+}
+
+.single-box {
+  overflow: hidden;
+  background-color: #ffffff;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #f17300;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.single-box h4 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.img-area {
+  overflow: hidden;
+  padding: 15px 0 15px;
+  flex: 1;
+}
+
+.img-area img {
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  max-width: 50%; /* Ensure the image doesn't exceed the container */
+  max-height: 100px;
+}
+
+.info-area {
+  padding: 20px;
+}
+
+.info-area a {
+  display: inline-block;
+  margin: 25px 0 0;
+  background-color: #f17300;
+  color: #fff;
+  padding: 10px 35px;
+  border-radius: 4px;
+}
+
+.studio-slider .img-area,
+.studio-slider .info-area {
+  text-align: center;
+}
+
+.studio-slider .info-area {
+  padding: 20px;
+}
+
+.studio-slider .single-box {
+  margin-bottom: 20px;
+}
+
+.studio-slider .img-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.studio-slider .img-area img {
+  margin: 0 auto;
+  transition: all 0.5s ease;
+  max-width: 50%; 
+  max-height: 100px;
+  animation: none; 
+}
+
+.studio-slider .sec-heading {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.studio-slider .sec-heading h6 {
+  font-size: 36px;
+}
+
+.studio-slider .info-area h4,
+.studio-slider .info-area p,
+.studio-slider .info-area a {
+  margin-bottom: 10px;
+}
+
+.hidden-text {
+  display: none;
 }
 
 @keyframes move-animation {
@@ -318,8 +434,8 @@ body::before {
   height: 350px;
   margin-bottom: 40px;
   padding: 30px;
-  background-color: #ffffff; /* Kart rengi beyaz yapıldı */
-  border: 4px solid #f17300; /* Bordır rengi turuncu yapıldı */
+  background-color: #ffffff;
+  border: 4px solid #f17300;
   border-radius: 40px;
   overflow: hidden;
   display: flex;
@@ -364,100 +480,7 @@ body::before {
   margin: 3;
 }
 
-/*portfolyo*/
-
-.studio-slider .bi {
-  color: #f17300;
-}
-
-#portfolyo {
-  padding: 58px 0;
-  margin-bottom: 50px;
-}
-
-.sec-heading {
-  margin-bottom: 70px;
-  color: #0f9d58;
-}
-
-.sec-heading h6 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 50px;
-}
-
-.single-box {
-  border: 1px solid #ddd;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #fff;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-right: 20px;
-}
-
-.single-box:last-child {
-  margin-right: 0;
-}
-
-.info-area {
-  padding: 0 20px 45px;
-  flex-grow: 1;
-}
-
-.img-area {
-  overflow: hidden;
-  padding: 15px 0 15px;
-}
-
-.img-area img {
-  margin: 0 auto;
-  transition: all 0.5s ease;
-  max-width: 230px;
-  display: block;
-}
-
-.single-box:hover img {
-  transform: scale(1.1);
-}
-
-.info-area a {
-  display: inline-block;
-  margin: 25px 0 0;
-  background-color: #f17300;
-  color: #fff;
-  padding: 10px 35px;
-  border-radius: 4px;
-}
-
-.studio-slider .img-area,
-.studio-slider .info-area {
-  text-align: center;
-}
-
-.studio-slider .info-area {
-  padding: 20px;
-}
-
-.studio-slider .single-box {
-  margin-bottom: 20px;
-}
-
-.studio-slider .sec-heading {
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.studio-slider .sec-heading h6 {
-  font-size: 36px;
-}
-
-.hidden-text {
-  display: none;
-}
-
-/* Support Kartları */
+/* Support Cards */
 .server-wrapper {
   padding: 50px 0;
   background-color: #f8f9fa;
@@ -527,6 +550,7 @@ body::before {
   flex-direction: column;
   justify-content: center;
 }
+
 .card:hover {
   background-color: white;
   border-color: #f17300;
@@ -536,6 +560,7 @@ body::before {
 .card:hover p {
   color: #f17300;
 }
+
 .custom-card i {
   font-size: 3rem;
   margin-bottom: 15px;
@@ -543,4 +568,5 @@ body::before {
   padding: 10px;
   color: #fff;
 }
+
 
