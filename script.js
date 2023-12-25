@@ -1,3 +1,4 @@
+// Smooth scroll animation
 $('a[href^="#"]').on("click", function (e) {
   e.preventDefault();
 
@@ -13,7 +14,7 @@ $('a[href^="#"]').on("click", function (e) {
       800,
       "swing",
       function () {
-        window.location.hash = target;
+        window.location.hash = "";
       }
     );
 });
@@ -22,10 +23,10 @@ $('a[href^="#"]').on("click", function (e) {
 let lastScrollTop = 0;
 let navbar = $(".navbar");
 
-$(window).scroll(function (event) {
-  let st = $(this).scrollTop();
+$(window).scroll(function () {
+  let scroll = $(this).scrollTop();
 
-  if (st > lastScrollTop) {
+  if (scroll > lastScrollTop) {
     // Downscroll code
     navbar.fadeOut();
   } else {
@@ -33,7 +34,17 @@ $(window).scroll(function (event) {
     navbar.fadeIn();
   }
 
-  lastScrollTop = st;
+  lastScrollTop = scroll;
+
+  // Footer visibility
+  let windowHeight = $(window).height();
+  let documentHeight = $(document).height();
+
+  if (scroll + windowHeight >= documentHeight) {
+    $("footer").css("bottom", 0);
+  } else {
+    $("footer").css("bottom", -100);
+  }
 });
 
 // Owl Carousel Initialization
@@ -73,15 +84,13 @@ let mySwiper = new Swiper(".studio-slider-swiper", {
     1920: { slidesPerView: 3 },
   },
 });
-
-// Bu satırları ekleyerek navigation (kaydırma tuşları) ve pagination (sayfalama noktaları) öğelerini kaldırabilirsiniz
 mySwiper.navigation.destroy();
 mySwiper.pagination.destroy();
 
 // Counter
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
-  const speed = 5000;
+  const speed = 10000;
 
   counters.forEach((counter) => {
     const updateCount = () => {
@@ -92,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (count < target) {
         counter.innerText = Math.ceil(count + inc);
-        setTimeout(updateCount, 1);
+        setTimeout(updateCount, 100);
       } else {
         counter.innerText = target;
       }
@@ -124,33 +133,68 @@ $(".studio-slider").owlCarousel({
   },
 });
 
-// Testimonial Box
-document.querySelectorAll(".testmonial-box .single-box").forEach((box) => {
-  let p = box.querySelector("p");
-  let linkedinButton = box.querySelector(".linkedin-button");
+document.addEventListener("DOMContentLoaded", function () {
+  // Studio Slider
+  document.querySelectorAll(".studio-slider .single-box").forEach((box) => {
+    let img = box.querySelector(".img-area img");
+    let overlay = box.querySelector(".overlay");
+    let infoArea = box.querySelector(".info-area");
 
-  p.style.display = "none";
+    box.addEventListener("click", function () {
+      if (!box.classList.contains("logo-enlarged")) {
+        document
+          .querySelectorAll(".studio-slider .single-box")
+          .forEach((otherBox) => {
+            otherBox.classList.remove("logo-enlarged");
+            otherBox.querySelector(".img-area img").style.transform =
+              "scale(1)";
+            otherBox.querySelector(".overlay").style.opacity = 0;
+            otherBox.querySelector(".info-area").style.opacity = 0;
+          });
 
-  box.addEventListener("click", function () {
-    p.style.display = p.style.display === "none" ? "block" : "none";
+        box.classList.add("logo-enlarged");
+        img.style.transform = "scale(1.2)";
+        overlay.style.opacity = 1;
+        infoArea.style.opacity = 1;
+      }
+    });
 
-    if (box.classList.contains("enlarged")) {
-      box.classList.remove("enlarged");
-    } else {
-      document
-        .querySelectorAll(".testmonial-box .single-box")
-        .forEach((otherBox) => {
-          otherBox.classList.remove("enlarged");
-        });
-
-      box.classList.add("enlarged");
-    }
+    box.addEventListener("mouseleave", function () {
+      if (box.classList.contains("logo-enlarged")) {
+        box.classList.remove("logo-enlarged");
+        img.style.transform = "scale(1)";
+        overlay.style.opacity = 0;
+        infoArea.style.opacity = 0;
+      }
+    });
   });
 
-  box.addEventListener("mouseleave", function () {
-    if (box.classList.contains("enlarged")) {
-      box.classList.remove("enlarged");
-    }
+  // Testimonial Box
+  document.querySelectorAll(".testmonial-box .single-box").forEach((box) => {
+    let p = box.querySelector("p");
+
+    box.addEventListener("click", function () {
+      p.style.display = p.style.display === "none" ? "block" : "none";
+
+      if (box.classList.contains("enlarged")) {
+        box.classList.remove("enlarged");
+      } else {
+        document
+          .querySelectorAll(".testmonial-box .single-box")
+          .forEach((otherBox) => {
+            otherBox.classList.remove("enlarged");
+          });
+
+        box.classList.add("enlarged");
+      }
+    });
+
+    box.addEventListener("mouseleave", function () {
+      if (box.classList.contains("enlarged")) {
+        box.classList.remove("enlarged");
+      }
+    });
   });
 });
+
 
