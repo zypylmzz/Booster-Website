@@ -90,7 +90,7 @@ mySwiper.pagination.destroy();
 // Counter
 document.addEventListener("DOMContentLoaded", function () {
   const counters = document.querySelectorAll(".counter");
-  const speed = 10000;
+  const speed = 30000;
 
   counters.forEach((counter) => {
     const updateCount = () => {
