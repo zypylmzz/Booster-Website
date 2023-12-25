@@ -369,13 +369,13 @@ body::before {
   top: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0); /* Başlangıçta siyah arka plan yok */
+  background: rgba(0, 0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease, background 0.3s ease; /* Opacity ve background geçiş efekti */
-  z-index: 999; /* Overlay'ın diğer elementlerin üstünde olması için z-index değeri ayarlandı */
+  transition: opacity 0.3s ease, background 0.3s ease;
+  z-index: 999;
 }
 
 .info-area {
@@ -392,7 +392,7 @@ body::before {
 .single-box:hover .overlay,
 .single-box:hover .info-area {
   opacity: 1;
-  background: rgba(0, 0, 0, 0.7); /* Hover durumunda siyah arka plan göster */
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .info-area a {
@@ -438,7 +438,7 @@ body::before {
 
 .studio-slider .sec-heading h6 {
   font-size: 36px;
-  color: #f17300; /* Turuncu renk */
+  color: #f17300;
 }
 
 .studio-slider .info-area h4,
@@ -476,6 +476,81 @@ body::before {
 .testmonial-box .single-box.enlarged img {
   transform: scale(1.2);
 }
+/* Support Section */
+.server-wrapper {
+  padding: 30px;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h6 {
+  color: #f17300;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  width: 30px;
+  height: 350px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: transparent; /* Set background to transparent */
+  border: 4px solid #f17300;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease; /* Added box-shadow transition */
+}
+
+.card:hover {
+  background-color: transparent;
+  transform: translateY(-6px);
+  border-color: #262626;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow on hover */
+}
+
+.card i {
+  color: #f17300; /* Changed icon color to orange */
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffffff; /* Set icon background color to white */
+  padding: 10px;
+}
+
+.card h2 {
+  color: #db4437;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  text-align: center;
+  width: 100%;
+  color: #ff6d00;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3;
+}
 
 /* Support Section */
 .server-wrapper {
@@ -505,7 +580,7 @@ body::before {
   height: 350px;
   margin-bottom: 40px;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: transparent; /* Set background to transparent */
   border: 4px solid #f17300;
   border-radius: 40px;
   overflow: hidden;
@@ -514,21 +589,23 @@ body::before {
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease; /* Added box-shadow transition */
 }
 
 .card:hover {
   background-color: transparent;
   transform: translateY(-6px);
   border-color: #262626;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow on hover */
 }
 
 .card i {
-  color: #7a00df;
+  color: #f17300; /* Changed icon color to orange */
   margin-bottom: 15px;
   font-size: 2.5rem;
   border-radius: 50%;
-  background-color: #f17300;
+  background-color: #ffffff; /* Set icon background color to white */
   padding: 10px;
 }
 
@@ -543,7 +620,7 @@ body::before {
 .card p {
   text-align: center;
   width: 100%;
-  color: ff6d00;
+  color: #ff6d00;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -551,6 +628,206 @@ body::before {
   margin: 3;
 }
 
+/* Support Section */
+.server-wrapper {
+  padding: 30px;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h6 {
+  color: #f17300;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
+.services-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.card {
+  width: 30px;
+  height: 350px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: transparent; /* Set background to transparent */
+  border: 4px solid #f17300;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for background and transform */
+}
+
+.card i {
+  color: #f17300; /* Changed icon color to orange */
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffffff; /* Set icon background color to white */
+  padding: 10px;
+}
+
+.card h2 {
+  color: #db4437;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  text-align: center;
+  width: 100%;
+  color: #ff6d00;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3;
+}
+
+/* Support Section */
+.server-wrapper {
+  padding: 30px;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h6 {
+  color: #f17300;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
+.services-cards {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 30px;
+}
+
+.card {
+  width: 30px;
+  height: 350px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: transparent;
+  border: 4px solid #f17300;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card i {
+  color: #f17300;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.card h2 {
+  color: #db4437;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  text-align: center;
+  width: 100%;
+  color: #ff6d00;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3;
+}
+
+/* Support Section */
+.server-wrapper {
+  padding: 30px;
+}
+
+.services {
+  text-align: center;
+}
+
+.services h6 {
+  color: #f17300;
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 65px;
+}
+
+.services-cards {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  gap: 30px;
+}
+
+.card {
+  width: 30px;
+  height: 350px;
+  margin-bottom: 40px;
+  padding: 30px;
+  background-color: transparent;
+  border: 4px solid #f17300;
+  border-radius: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card i {
+  color: #f17300;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+  border-radius: 50%;
+  background-color: #ffffff;
+  padding: 10px;
+}
+
+.card h2 {
+  color: #db4437;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.card p {
+  text-align: center;
+  width: 100%;
+  color: #ff6d00;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3;
+}
 /* Support Cards */
 .server-wrapper {
   padding: 50px 0;
@@ -575,25 +852,19 @@ body::before {
 }
 
 .card {
-  flex: 0 0 calc(33.3333% - 20px);
+  flex: 0 0 calc(33.3333% - 20px); /* Each card takes up 33.3333% of the container width */
   max-width: 300px;
   height: auto;
   margin-bottom: 20px;
   padding: 15px;
-  background-color: white;
-  border: 1px solid #4285f4;
+  background-color: #f8f9fa;
+  border: none;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.card:hover {
-  background-color: transparent;
-  transform: translateY(-8px);
-  border-color: #86bbd8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
 }
 
 .card i {
@@ -601,8 +872,8 @@ body::before {
   margin-bottom: 10px;
   font-size: 2rem;
   border-radius: 50%;
-  background-color: white;
-  padding: 5px;
+  background-color: #f8f9fa;
+  padding: 10px;
 }
 
 .card h2 {
@@ -615,21 +886,12 @@ body::before {
 
 .card p {
   text-align: center;
-  width: 108.5%;
+  width: 100%;
   color: #f26419;
   flex-grow: 1.5;
+  display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.card:hover {
-  background-color: white;
-  border-color: #f17300;
-}
-
-.card:hover h2,
-.card:hover p {
-  color: #f17300;
 }
 
 .custom-card i {
@@ -637,7 +899,13 @@ body::before {
   margin-bottom: 15px;
   background-color: transparent;
   padding: 10px;
-  color: #fff;
+  color: #f8f9fa;
+}
+
+.card:hover {
+  background-color: #f8f9fa;
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
@@ -662,11 +930,11 @@ footer {
   position: absolute;
   width: 100%;
   background-color: #fff;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   transition: transform 0.3s ease;
   z-index: 999;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 body.show-footer footer {
@@ -696,7 +964,7 @@ body.show-footer footer {
 
 .socialIcons a {
   color: #f17300;
-  font-size: 28px;
+  font-size: 25px;
   margin: 0 15px;
   text-decoration: none;
   display: flex;
@@ -720,5 +988,3 @@ body.show-footer footer {
   width: 100%;
   margin-bottom: 10px;
 }
-
-
