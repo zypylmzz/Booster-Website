@@ -1,13 +1,33 @@
 /* Font İmport */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-/* Global Reset */
+@media only screen and (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: 16px;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 body::before {
   display: block;
   content: "";
@@ -109,13 +129,15 @@ body::before {
   animation: fadeIn 0.5s ease-in-out;
   flex: 0 0 auto;
   padding: 10px;
-  border-radius: 80px 20px 20px 80px;
+  border-radius: 45px;
+  border: 2px solid #f17300; /* Turuncu kenar çizgisi */
+  background-color: #fff;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out,
-    width 0.3s ease-in-out, height 0.3s ease-in-out; /* Added height transition */
+    width 0.3s ease-in-out, height 0.3s ease-in-out;
   text-align: center;
-  width: 300px; /* Adjust the initial width to your desired size */
-  height: 180px; /* Adjust the initial height to your desired size */
+  width: 300px;
+  height: 180px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,45 +149,36 @@ body::before {
 .custom-card .icon-container {
   margin-bottom: 5px;
   font-size: 9px;
+  color: #f17300; /* Turuncu renk */
+}
+
+.custom-card .icon-container i {
+  color: #f17300; /* Turuncu renk */
 }
 
 .custom-card p,
-.custom-card h1 {
-  font-size: 26px; 
+.custom-card h1,
+.custom-card .counter,
+.custom-card .box-title {
+  font-size: 26px;
   font-weight: bold;
-  color: #ffffff;
-  align-items: center;
+  color: #f17300; /* Turuncu renk */
 }
 
 .custom-card:nth-child(1) {
-  background-color: #4285f4;
+  background-color: #fff;
 }
 
 .custom-card:nth-child(2) {
-  background-color: #0f9d58;
+  background-color: #fff;
 }
 
 .custom-card:nth-child(3) {
-  background-color: #db4437;
-}
-
-.counter {
-  font-size: 32px;
-  font-weight: bold;
-  align-items: center;
-}
-
-.box-title {
-  font-size: 20px;
-  font-weight: bold;
+  background-color: #fff;
 }
 
 .custom-card:not(:last-child) {
   margin-right: 30px;
-}
-
-.custom-card {
-  border-radius: 45px;
 }
 
 @keyframes countUp {
@@ -187,35 +200,35 @@ body::before {
   margin: 0 auto;
 }
 
-#Programsüreci {
+#sürec {
   padding: 50px 0;
   display: flex;
   align-items: center;
   text-align: center;
 }
 
-#Programsüreci img {
+#sürec img {
   max-width: 100%;
   height: auto;
   margin-right: 20px;
 }
 
-#Programsüreci h2 {
-  font-size: 2em;
+#sürec h2 {
+  font-size: 2.2em; /* Daha büyük font boyutu */
   font-weight: bold;
   color: #db4437;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Boşluk ekledim */
 }
 
-#Programsüreci p {
-  font-size: 1em;
+#sürec p {
+  font-size: 1.1em; /* Daha büyük font boyutu */
   line-height: 1.6;
   color: #555;
   max-width: 600px;
-  margin: 0 auto 20px;
+  margin: 20px auto 20px; /* Boşluk ekledim */
 }
 
-#Programsüreci .btn {
+#sürec .btn {
   background-color: transparent;
   color: #dc3545;
   border-color: #dc3545;
@@ -224,28 +237,37 @@ body::before {
   margin-top: 10px;
 }
 
-#Programsüreci .btn:hover {
+#sürec .btn:hover {
   background-color: #dc3545;
   color: #fff;
 }
 
 /* Responsive Text */
 @media (max-width: 768px) {
-  #Programsüreci {
+  #sürec {
     flex-direction: column;
   }
 
-  #Programsüreci img {
+  #sürec img {
     margin-right: 0;
     margin-bottom: 20px;
   }
 
-  #Programsüreci h2 {
+  #sürec h2 {
     font-size: 1.5em;
+  }
+
+  #sürec p {
+    font-size: 1em;
   }
 }
 
 /* Studio Slider Stilleri */
+#portfolyo {
+  text-align: center;
+  color: #f17300;
+}
+
 .studio-slider {
   display: flex;
   justify-content: center;
@@ -288,17 +310,18 @@ body::before {
 #portfolyo {
   padding: 58px 0;
   margin-bottom: 50px;
+  z-index: 1;
 }
 
 .sec-heading {
-  margin-bottom: 70px;
-  color: #dc3545;
+  margin-bottom: 80px;
   text-align: center;
 }
 
 .sec-heading h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
+  color: #f17300; /* Turuncu renk */
 }
 
 .single-box {
@@ -307,12 +330,18 @@ body::before {
   margin-bottom: 40px;
   text-align: center;
   width: 100%;
-  height: 400px;
+  height: 370px;
   display: flex;
   flex-direction: column;
   border: 3px solid #f17300;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
+  position: relative;
+  cursor: pointer;
+}
+
+.single-box:hover {
+  border-color: #f3722c;
 }
 
 .single-box h4 {
@@ -324,17 +353,46 @@ body::before {
   overflow: hidden;
   padding: 15px 0 15px;
   flex: 1;
+  position: relative;
 }
 
 .img-area img {
   margin: 0 auto;
   transition: all 0.5s ease;
-  max-width: 50%; /* Ensure the image doesn't exceed the container */
-  max-height: 100px;
+  max-width: 100%; /* Full-width image */
+  height: auto;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0); /* Başlangıçta siyah arka plan yok */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease; /* Opacity ve background geçiş efekti */
+  z-index: 999; /* Overlay'ın diğer elementlerin üstünde olması için z-index değeri ayarlandı */
 }
 
 .info-area {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   padding: 20px;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.single-box:hover .overlay,
+.single-box:hover .info-area {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7); /* Hover durumunda siyah arka plan göster */
 }
 
 .info-area a {
@@ -368,9 +426,9 @@ body::before {
 .studio-slider .img-area img {
   margin: 0 auto;
   transition: all 0.5s ease;
-  max-width: 50%; 
+  max-width: 50%;
   max-height: 100px;
-  animation: none; 
+  animation: none;
 }
 
 .studio-slider .sec-heading {
@@ -380,6 +438,7 @@ body::before {
 
 .studio-slider .sec-heading h6 {
   font-size: 36px;
+  color: #f17300; /* Turuncu renk */
 }
 
 .studio-slider .info-area h4,
@@ -404,6 +463,18 @@ body::before {
   100% {
     top: 3px;
   }
+}
+
+.testmonial-box .single-box.enlarged .overlay {
+  opacity: 1;
+}
+
+.testmonial-box .single-box.enlarged .info-area {
+  opacity: 1;
+}
+
+.testmonial-box .single-box.enlarged img {
+  transform: scale(1.2);
 }
 
 /* Support Section */
@@ -567,6 +638,87 @@ body::before {
   background-color: transparent;
   padding: 10px;
   color: #fff;
+}
+
+/* Footer */
+.logo {
+  margin-bottom: 20px;
+}
+
+.logo img {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+.sectionWithOrangeBackground {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  z-index: 999;
+  transform: translateY(100%);
+}
+
+body.show-footer footer {
+  transform: translateY(0);
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border: none;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.socialIcons a {
+  color: #f17300;
+  font-size: 28px;
+  margin: 0 15px;
+  text-decoration: none;
+  display: flex;
+}
+
+.socialIcons a i {
+  font-size: 1.3em;
+  color: #f17300;
+  opacity: 0.9;
+  margin: auto;
+}
+
+.footerBottom p {
+  color: #f17300;
+  opacity: 0.7;
+  letter-spacing: 0.25px;
+  margin-top: 15px;
+}
+
+.footerBottom {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 
