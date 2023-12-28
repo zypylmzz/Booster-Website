@@ -73,7 +73,7 @@ body::before {
 }
 
 .navbar-nav .nav-link:hover {
-  color: #f3722c;
+  color: #db4437;
 }
 
 .navbar-nav .nav-link::after {
@@ -84,7 +84,7 @@ body::before {
   left: 0;
   width: 0;
   height: 2px;
-  background-color: #f3722c;
+  background-color: #db4437; /* Virgül ekledim */
   transition: width 0.4s ease-in-out;
 }
 
@@ -130,8 +130,8 @@ body::before {
   flex: 0 0 auto;
   padding: 10px;
   border-radius: 45px;
-  border: 2px solid #f17300; /* Turuncu kenar çizgisi */
-  background-color: #fff;
+  border: 2px solid #db4437;
+  background-color: #f8f9fa;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out,
     width 0.3s ease-in-out, height 0.3s ease-in-out;
@@ -148,33 +148,36 @@ body::before {
 
 .custom-card .icon-container {
   margin-bottom: 5px;
-  font-size: 9px;
-  color: #f17300; /* Turuncu renk */
+  font-size: 30px; /* İkon boyutu güncellendi */
+  color: #4285f4;
 }
 
 .custom-card .icon-container i {
-  color: #f17300; /* Turuncu renk */
+  color: #fff;
 }
 
 .custom-card p,
 .custom-card h1,
 .custom-card .counter,
 .custom-card .box-title {
-  font-size: 26px;
+  font-size: 25px;
   font-weight: bold;
-  color: #f17300; /* Turuncu renk */
+  color: #fff;
 }
 
 .custom-card:nth-child(1) {
-  background-color: #fff;
+  background-color: #4285f4;
+  border: 3px solid #4285f4;
 }
 
 .custom-card:nth-child(2) {
-  background-color: #fff;
+  background-color: #db4437;
+  border: 3px solid #db4437;
 }
 
 .custom-card:nth-child(3) {
-  background-color: #fff;
+  background-color: #0f9d58;
+  border: 3px solid #0f9d58;
 }
 
 .custom-card:not(:last-child) {
@@ -265,7 +268,7 @@ body::before {
 /* Studio Slider Stilleri */
 #portfolyo {
   text-align: center;
-  color: #f17300;
+  color: #db4437;
 }
 
 .studio-slider {
@@ -299,7 +302,7 @@ body::before {
 }
 
 .studio-slider button.owl-carousel.active {
-  background-color: #f17300;
+  background-color: #db4437;
 }
 
 .move-animation {
@@ -321,7 +324,7 @@ body::before {
 .sec-heading h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 50px;
-  color: #f17300; /* Turuncu renk */
+  color: #db4437; /* Turuncu renk */
 }
 
 .single-box {
@@ -333,7 +336,7 @@ body::before {
   height: 370px;
   display: flex;
   flex-direction: column;
-  border: 3px solid #f17300;
+  border: 3px solid #db4437;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out, border 0.3s ease-in-out;
   position: relative;
@@ -341,7 +344,7 @@ body::before {
 }
 
 .single-box:hover {
-  border-color: #f3722c;
+  border-color: #db4437;
 }
 
 .single-box h4 {
@@ -398,7 +401,7 @@ body::before {
 .info-area a {
   display: inline-block;
   margin: 25px 0 0;
-  background-color: #f17300;
+  background-color: #db4437;
   color: #fff;
   padding: 10px 35px;
   border-radius: 4px;
@@ -438,7 +441,7 @@ body::before {
 
 .studio-slider .sec-heading h6 {
   font-size: 36px;
-  color: #f17300;
+  color: #db4437;
 }
 
 .studio-slider .info-area h4,
@@ -479,6 +482,7 @@ body::before {
 /* Support Section */
 .server-wrapper {
   padding: 30px;
+  background-color: transparent;
 }
 
 .services {
@@ -486,426 +490,61 @@ body::before {
 }
 
 .services h6 {
-  color: #f17300;
-  font-size: 50px;
+  color: #db4437;
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 65px;
+  margin-bottom: 80px; /* Başlık ile kart arasındaki boşluğu artırdı */
 }
 
 .services-cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: center;
 }
 
 .card {
-  width: 30px;
-  height: 350px;
-  margin-bottom: 40px;
+  width: 350px; /* Kart genişliği */
+  height: 250px; /* Kart yüksekliği */
+  margin: 0 15px 20px 15px; /* Sağ, sol, alt boşluk değerleri eklendi */
   padding: 30px;
-  background-color: transparent; /* Set background to transparent */
-  border: 4px solid #f17300;
-  border-radius: 40px;
+  background-color: transparent; /* Arka plan rengi şeffaf */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Gölge efekti artırıldı */
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease; /* Added box-shadow transition */
-}
-
-.card:hover {
-  background-color: transparent;
-  transform: translateY(-6px);
-  border-color: #262626;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow on hover */
+  border: none; /* Kartın kenar çizgisi kaldırıldı */
 }
 
 .card i {
-  color: #f17300; /* Changed icon color to orange */
-  margin-bottom: 15px;
-  font-size: 2.5rem;
-  border-radius: 50%;
-  background-color: #ffffff; /* Set icon background color to white */
-  padding: 10px;
-}
-
-.card h2 {
-  color: #db4437;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.card p {
-  text-align: center;
-  width: 100%;
-  color: #ff6d00;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3;
-}
-
-/* Support Section */
-.server-wrapper {
-  padding: 30px;
-}
-
-.services {
-  text-align: center;
-}
-
-.services h6 {
-  color: #f17300;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 65px;
-}
-
-.services-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.card {
-  width: 30px;
-  height: 350px;
-  margin-bottom: 40px;
-  padding: 30px;
-  background-color: transparent; /* Set background to transparent */
-  border: 4px solid #f17300;
-  border-radius: 40px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease,
-    box-shadow 0.3s ease; /* Added box-shadow transition */
-}
-
-.card:hover {
-  background-color: transparent;
-  transform: translateY(-6px);
-  border-color: #262626;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow on hover */
-}
-
-.card i {
-  color: #f17300; /* Changed icon color to orange */
-  margin-bottom: 15px;
-  font-size: 2.5rem;
-  border-radius: 50%;
-  background-color: #ffffff; /* Set icon background color to white */
-  padding: 10px;
-}
-
-.card h2 {
-  color: #db4437;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.card p {
-  text-align: center;
-  width: 100%;
-  color: #ff6d00;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3;
-}
-
-/* Support Section */
-.server-wrapper {
-  padding: 30px;
-}
-
-.services {
-  text-align: center;
-}
-
-.services h6 {
-  color: #f17300;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 65px;
-}
-
-.services-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 30px;
-}
-
-.card {
-  width: 30px;
-  height: 350px;
-  margin-bottom: 40px;
-  padding: 30px;
-  background-color: transparent; /* Set background to transparent */
-  border: 4px solid #f17300;
-  border-radius: 40px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transition for background and transform */
-}
-
-.card i {
-  color: #f17300; /* Changed icon color to orange */
-  margin-bottom: 15px;
-  font-size: 2.5rem;
-  border-radius: 50%;
-  background-color: #ffffff; /* Set icon background color to white */
-  padding: 10px;
-}
-
-.card h2 {
-  color: #db4437;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.card p {
-  text-align: center;
-  width: 100%;
-  color: #ff6d00;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3;
-}
-
-/* Support Section */
-.server-wrapper {
-  padding: 30px;
-}
-
-.services {
-  text-align: center;
-}
-
-.services h6 {
-  color: #f17300;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 65px;
-}
-
-.services-cards {
-  display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  gap: 30px;
-}
-
-.card {
-  width: 30px;
-  height: 350px;
-  margin-bottom: 40px;
-  padding: 30px;
-  background-color: transparent;
-  border: 4px solid #f17300;
-  border-radius: 40px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.card i {
-  color: #f17300;
-  margin-bottom: 15px;
-  font-size: 2.5rem;
-  border-radius: 50%;
-  background-color: #ffffff;
-  padding: 10px;
-}
-
-.card h2 {
-  color: #db4437;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.card p {
-  text-align: center;
-  width: 100%;
-  color: #ff6d00;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3;
-}
-
-/* Support Section */
-.server-wrapper {
-  padding: 30px;
-}
-
-.services {
-  text-align: center;
-}
-
-.services h6 {
-  color: #f17300;
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 65px;
-}
-
-.services-cards {
-  display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  gap: 30px;
-}
-
-.card {
-  width: 30px;
-  height: 350px;
-  margin-bottom: 40px;
-  padding: 30px;
-  background-color: transparent;
-  border: 4px solid #f17300;
-  border-radius: 40px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.card i {
-  color: #f17300;
-  margin-bottom: 15px;
-  font-size: 2.5rem;
-  border-radius: 50%;
-  background-color: #ffffff;
-  padding: 10px;
-}
-
-.card h2 {
-  color: #db4437;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 1px;
-  margin-bottom: 20px;
-}
-
-.card p {
-  text-align: center;
-  width: 100%;
-  color: #ff6d00;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 3;
-}
-/* Support Cards */
-.server-wrapper {
-  padding: 50px 0;
-  background-color: #f8f9fa;
-}
-
-.services {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.services h3 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #fe7f2d;
-}
-
-.services-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
-.card {
-  flex: 0 0 calc(33.3333% - 20px); /* Each card takes up 33.3333% of the container width */
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 20px;
-  padding: 15px;
-  background-color: #f8f9fa;
-  border: none;
-  border-radius: 20px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box-shadow */
-}
-
-.card i {
-  color: #4285f4;
+  color: #db4437; /* Kırmızı renk */
   margin-bottom: 10px;
-  font-size: 2rem;
+  font-size: 1.5rem;
   border-radius: 50%;
-  background-color: #f8f9fa;
+  background-color: transparent; /* İç renk şeffaf */
   padding: 10px;
 }
 
 .card h2 {
-  color: #4285f4;
-  font-size: 20px;
+  color: #db4437; /* Kırmızı renk */
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 5px;
+  margin-bottom: 20px; /* Başlık ile kart arasındaki boşluğu artırdı */
 }
 
 .card p {
   text-align: center;
   width: 100%;
-  color: #f26419;
-  flex-grow: 1.5;
+  color: #000000;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.custom-card i {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  background-color: transparent;
-  padding: 10px;
-  color: #f8f9fa;
-}
-
-.card:hover {
-  background-color: #f8f9fa;
-  transform: translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 3;
+  font-style: bold;
 }
 
 /* Footer */
@@ -921,7 +560,7 @@ body::before {
 }
 
 .sectionWithOrangeBackground {
-  background-color: #fff;
+  background-color: #f8f9fa;
   padding: 20px;
   text-align: center;
 }
@@ -929,7 +568,7 @@ body::before {
 footer {
   position: absolute;
   width: 100%;
-  background-color: #fff;
+  background-color: #f8f9fa;
   padding: 10px;
   text-align: center;
   transition: transform 0.3s ease;
@@ -950,7 +589,7 @@ body.show-footer footer {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #f8f9fa;
   padding: 20px;
   border: none;
 }
@@ -963,7 +602,7 @@ body.show-footer footer {
 }
 
 .socialIcons a {
-  color: #f17300;
+  color: #db4437;
   font-size: 25px;
   margin: 0 15px;
   text-decoration: none;
@@ -972,13 +611,13 @@ body.show-footer footer {
 
 .socialIcons a i {
   font-size: 1.3em;
-  color: #f17300;
+  color: #db4437;
   opacity: 0.9;
   margin: auto;
 }
 
 .footerBottom p {
-  color: #f17300;
+  color: #db4437;
   opacity: 0.7;
   letter-spacing: 0.25px;
   margin-top: 15px;
@@ -988,3 +627,41 @@ body.show-footer footer {
   width: 100%;
   margin-bottom: 10px;
 }
+
+.Partnerlerimiz {
+  text-align: center;
+  margin-bottom: 50px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.Partnerlerimiz h2 {
+  font-size: 2.7em;
+  font-weight: bold;
+  color: #db4437;
+  margin-bottom: 20px;
+  padding: 20px;
+  gap: 10px;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.img-information {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
+
+.img-information img {
+  max-width: 15%;
+  height: auto;
+  margin-bottom: 1px;
+  flex: 1 1 3%;
+}
+
